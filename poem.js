@@ -9,9 +9,9 @@ const lyrics = [
     "Please love me or I'll be gone, I'll be gone",
     "Girl you're every woman in the world to me",
     "you're my fantasy, you're my reality",
-    "you're evrything I need",
-    "Evrything good, evrything fine, that's what you are",
-    "I'm living a lifetime in evry minute that we're together",
+    "you're everything I need",
+    "Everything good, everything fine, that's what you are",
+    "I'm living a lifetime in every minute that we're together",
     "And I'm stayin right here forever",
     'Those thoughts of you keep taunting me',
     'Holding you, a feeling I never outgrew',
@@ -100,23 +100,26 @@ const lyrics = [
     'But now it longs to be only with you',
     'Remember the words from my heart will always be true',
   ]
+
+  let poemArea = document.querySelector('.poem')
   
   const generate = () => {
     let total = 100
+    let poem = ""
     for (i = 0; i < total; i++) {
       let pick = Math.floor(Math.random() * total)
       const phrase = lyrics[pick]
-      //console.log(phrase[0].toUpperCase())
       let upperPhrase = phrase.charAt(0).toUpperCase() + phrase.slice(1)
       lyrics.splice(pick, 1)
-      if((pick % 4) == 0 ) {
-        console.log(upperPhrase + '\n')
+      if((total % 4) == 0 ) {
+        poem = poem + '\n' + upperPhrase + '\n'
       } else {
-        console.log(upperPhrase)
+        poem = poem + '\n' + upperPhrase
       }
-      
-      total--
+      total-- 
     }
+    poemArea.value = poem
   }
 
-  generate()
+  let poemButton = document.querySelector('button')
+  poemButton.addEventListener("click", generate);
