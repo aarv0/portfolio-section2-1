@@ -45,6 +45,10 @@ nav ul {
     height: 50px;
   }
 
+  textarea {
+    text-align: center;
+  }
+
   .poem {
     font-size: 1.25rem;
   }

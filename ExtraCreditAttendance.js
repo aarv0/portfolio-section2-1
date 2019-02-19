@@ -5,3 +5,7 @@ const students_earning_extra_credit_attendance = [
 const students_Feb14 = [
     'Britten', 'Bryon', 'Patrick', 'Nate', 'Wyatt', 'Ben', 'Max', 'Kristen'
 ]
+
+const students_Feb19 = [
+    'Bryon', 'Patrick', 'Nate', 'Wyatt', 'Ben', 'Max', 'Kristin', 'Jerel', 'Haven'
+]

@@ -101,16 +101,19 @@ const lyrics = [
     'Remember the words from my heart will always be true',
   ]
 
+  console.log('Welcome to my poetry app!')
+
   let poemArea = document.querySelector('.poem')
   
   const generate = () => {
-    let total = 100
+    let total = lyrics.length
     let poem = ""
     for (i = 0; i < total; i++) {
       let pick = Math.floor(Math.random() * total)
       const phrase = lyrics[pick]
       let upperPhrase = phrase.charAt(0).toUpperCase() + phrase.slice(1)
       lyrics.splice(pick, 1)
+      console.log("We removed item " + pick + " from lyrics: " + lyrics)
       if((total % 4) == 0 ) {
         poem = poem + '\n' + upperPhrase + '\n'
       } else {
@@ -118,7 +121,7 @@ const lyrics = [
       }
       total-- 
     }
-    poemArea.value = poem
+    poemArea.value = poem + '\n'
   }
 
   let poemButton = document.querySelector('button')
