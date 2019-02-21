@@ -7,5 +7,9 @@ const students_Feb14 = [
 ]
 
 const students_Feb19 = [
-    'Bryon', 'Patrick', 'Nate', 'Wyatt', 'Ben', 'Max', 'Kristin', 'Jerel', 'Haven'
+    'Bryon', 'Patrick', 'Nate', 'Wyatt', 'Ben', 'Max', 'Kristin', 'Jerel', 'Haven', 'David'
+]
+
+const students_Feb21 = [
+    'Bryon', 'Patrick', 'Wyatt', 'David', 'Haven', 'Logan'
 ]
