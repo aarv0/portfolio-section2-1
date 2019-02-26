@@ -108,12 +108,13 @@ const lyrics = [
   const generate = () => {
     let total = lyrics.length
     let poem = ""
+    let newLyrics = [...lyrics]
     for (i = 0; i < total; i++) {
       let pick = Math.floor(Math.random() * total)
-      const phrase = lyrics[pick]
+      const phrase = newLyrics[pick]
       let upperPhrase = phrase.charAt(0).toUpperCase() + phrase.slice(1)
-      lyrics.splice(pick, 1)
-      console.log("We removed item " + pick + " from lyrics: " + lyrics)
+      newLyrics.splice(pick, 1)
+      console.log("We removed item " + pick + " from lyrics: " + newLyrics)
       if((total % 4) == 0 ) {
         poem = poem + '\n' + upperPhrase + '\n'
       } else {

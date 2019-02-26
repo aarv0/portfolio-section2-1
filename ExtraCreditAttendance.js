@@ -11,5 +11,9 @@ const students_Feb19 = [
 ]
 
 const students_Feb21 = [
-    'Bryon', 'Patrick', 'Wyatt', 'David', 'Haven', 'Logan'
+    'Bryon', 'Patrick', 'Wyatt', 'David', 'Haven', 'Logan', 'Jago'
+]
+
+const students_Feb26 = [
+    'Bryon', 'Patrick', 'Wyatt', 'Rachel', 'Logan', 'Jago', 'Nate', 'Max', 'Ben', 'Britten'
 ]
