@@ -126,4 +126,4 @@ const lyrics = [
   }
 
   let poemButton = document.querySelector('button')
-  poemButton.addEventListener("click", generate);
+  //poemButton.addEventListener("click", generate);
