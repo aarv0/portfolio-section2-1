@@ -5,12 +5,12 @@
 }
 
 .container div {
-
+    width: 200px;
     margin: 10px;
     text-align: center;
 }
 
-div.swatch {
-    width: 20px;
-    height: 20px;
+img {
+    width: 200px;
+    padding: 4px;
 }

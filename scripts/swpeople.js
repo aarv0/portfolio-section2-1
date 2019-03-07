@@ -42,19 +42,16 @@ mainContainer.className = 'container'
 
 allHomeWorlds.forEach(person => {
   let personElement = document.createElement('div')
-  let swatchElement = document.createElement('div')
   let planetElement = document.createElement('p')
   let imageElement = document.createElement('img')
 
   personElement.className = 'card'
   personElement.textContent = person.name
-  swatchElement.className = 'swatch mdi mdi-eye'
-  swatchElement.style.borderLeftColor = person.eye_color
   planetElement.textContent = person.home
+  planetElement.style.backgroundColor = person.eye_color
   imageElement.src = person.imagePath
 
   personElement.appendChild(planetElement)
-  personElement.appendChild(swatchElement)
   personElement.appendChild(imageElement)
   mainContainer.appendChild(personElement)
 })
