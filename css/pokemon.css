@@ -65,8 +65,7 @@ img {
 
 .backImage {
     position: absolute;
-    top: 0;
-    left: 0;
+    left: 6px;
     opacity: 0.25;
 }
 
