@@ -1,11 +1,5 @@
 import { pokemon } from '../data/pokemon.js'
 
-class Pokemon {
-    constructor(id) {
-        this.id = id
-    }
-}
-
 const mainContainer = document.querySelector('.container')
 
 function cardFront(pokeData) {
@@ -28,12 +22,32 @@ function cardFront(pokeData) {
     return cardFront
 }
 
+function cardBackInfo(pokeData) {
+    let infoDiv = document.createElement('div')
+    infoDiv.className = 'infoDiv'
+    let moveOne = document.createElement('p')
+    let moveTwo = document.createElement('p')
+    let moveThree = document.createElement('p')
+    let moveFour = document.createElement('p')
+    moveOne.textContent = pokeData.moves[0].move.name
+    moveTwo.textContent = pokeData.moves[1].move.name
+    moveThree.textContent = pokeData.moves[2].move.name
+    moveFour.textContent = pokeData.moves[3].move.name
+    infoDiv.appendChild(moveOne)
+    infoDiv.appendChild(moveTwo)
+    infoDiv.appendChild(moveThree)
+    infoDiv.appendChild(moveFour)
+    return infoDiv
+}
+
 function cardBack(pokeData) {
     let cardBack = document.createElement('div')
     let backImage = document.createElement('img')
+    backImage.className = 'backImage'
     backImage.src = `../images/pokeball.png`
     cardBack.className = 'card__face card__face--back'
     cardBack.appendChild(backImage)
+    cardBack.appendChild(cardBackInfo(pokeData))
     return cardBack
 }
 
@@ -65,6 +79,9 @@ pokemon.forEach(singleMon => {
 })
 
 function matchIdToImage(aPokemon) {
+    if(aPokemon.id === 0) {
+        aPokemon.imageID = 0
+    }
     if(aPokemon.id < 10) {
         aPokemon.imageID = "00" + aPokemon.id
     }
@@ -88,12 +105,19 @@ function fetchSinglePokemon(id) {
     })
 }
 
+class Pokemon {
+    constructor(name) {
+        this.id = 0,
+        this.name = name
+    }
+}
 
 const newPokemonButton = document.querySelector('button')
 
 newPokemonButton.addEventListener('click', function() {
-    let pokemonID = prompt('Enter an ID of an existing pokemon:')
-    fetchSinglePokemon(pokemonID)
+    createPokeCard(matchIdToImage(new Pokemon('Thoremon')))
+    // let pokemonID = prompt('Enter an ID of an existing pokemon:')
+    // fetchSinglePokemon(pokemonID)
   });
 
 

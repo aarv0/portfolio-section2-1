@@ -40,7 +40,7 @@ main {
 }
 
 .card__face--back {
-    text-align: center;
+text-align: center;
   transform: rotateY(180deg);
 }
 
@@ -51,10 +51,25 @@ figure {
 
 button {
   width: 300px;
+  height: 80px;
+  font-size: 1.5rem;
+  background-color: #a86d4f;
+  color: salmon;
 }
 
 img {
     padding: 4px;
     width: 200px;
     height: 200px;
+}
+
+.backImage {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0.25;
+}
+
+.infoDiv {
+    position: relative;
 }
