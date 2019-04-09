@@ -8,11 +8,21 @@
     <link rel="stylesheet" type="text/css" media="screen" href="/css/pokemon.css">
 </head>
 <body>
+    <header>
+        <h2>Pokemon Baseball Cards</h2>
+        <h3>Click on each card to see its stats.  Add more cards to the collection by clicking the button below.</h3>
+    </header>
     <main>
     <div class="container">
 
     </div>
-    <button class="button is-primary">Fetch a specific Pokemon</button>
+    <button id="fetchPokemon" >Fetch a specific Pokemon</button>
+    <button id="thoremon" >Create a new Thoremon</button>
+    <div class="button is-primary">
+        <p>Choose how to filter your list of Pokemon:</p>
+            <input type="checkbox" id="poison" name="poison">
+            <label for="poison">Poison</label>
+          </div>
 </main>
     <script src="/scripts/pokeCards.js" type="module"></script>
 </body>

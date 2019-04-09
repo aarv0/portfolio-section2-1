@@ -53,8 +53,8 @@ button {
   width: 300px;
   height: 80px;
   font-size: 1.5rem;
-  background-color: #a86d4f;
-  color: salmon;
+  background-color: #696664;
+  color: rgb(19, 32, 216);
 }
 
 img {
@@ -72,3 +72,8 @@ img {
 .infoDiv {
     position: relative;
 }
+
+header {
+  text-align: center;
+}
+
