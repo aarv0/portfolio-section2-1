@@ -1,4 +1,4 @@
-import { pokemon } from '../data/pokemon.js'
+import { pokemon } from '/pokemon.js'
 
 const mainContainer = document.querySelector('.container')
 
@@ -114,7 +114,36 @@ function fetchSinglePokemon(id) {
       createPokeCard(matchIdToImage(retrievedPokemon))
     })
 }
-
+/*
+class Pokemon {
+    constructor(name) {
+        this.id = 0,
+        this.name = name,
+        this.moves = [
+          {
+            move: {
+              name: prompt('Enter the first move:'),
+            },
+          },
+          {
+            move: {
+              name: prompt('Enter the second move:'),
+            },
+          },
+          {
+            move: {
+              name: prompt('Enter the third move:'),
+            },
+          },
+          {
+            move: {
+              name: prompt('Enter the fourth move:'),
+            },
+          },
+        ]
+    }
+  }
+*/
 class Pokemon {
   constructor(name) {
       this.id = 0,
@@ -143,6 +172,7 @@ class Pokemon {
       ]
   }
 }
+
 
 const thoremonButton = document.querySelector('#thoremon')
 const selectPokemonButton = document.querySelector('#fetchPokemon')
